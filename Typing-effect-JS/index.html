@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #245;
+            color: white;
+            font-family: arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <script>
+
+        let title = "ABCDFE"
+        let charsetIndex = 0
+
+        function showCharacter(i){
+        h1.innerHTML += title[i]}
+     
+        function nextCharacter(){
+               showCharacter(charsetIndex)
+               charsetIndex++
+               if(charsetIndex >= title.length - 1){
+
+               clearInterval(timerId)
+        }}
+     let timerId = setInterval(nextCharacter, 100)
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double FOR</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+let text =``
+for(let y=1; y<=10; y++){
+    for(let x=1; x<=10; x++){
+        if(y % 5 ==0){
+text+=`#`
+        }else{
+            text+=`*`
+        }
+
+    }
+    text += `<br>`
+// text += `\n`
+}
+
+
+container.innerHTML = text
+
+// console.log(text)
+    </script>
+</body>
+</html>

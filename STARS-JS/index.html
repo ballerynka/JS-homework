@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star generator</title>
+    <link rel="stylesheet" href="generator.css" />
+  </head>
+  <body>
+    <div id="sky">
+      
+    </div>
+
+    <form id="form-settings"> 
+      <label for="">
+        <input 
+        id="starCountInput" 
+        type="text"  
+        placeholder="stars quantity" 
+        onkeyup="getCount()"
+        >
+      </label>
+
+      <label for="">
+        <input style="width: 100px;" 
+        type="color"
+        value=""
+        id="starColorInput"
+     placeholder="choose color"
+        onchange="getColor(color)"
+        >
+      </label>
+    </form>
+    <script src="generator.js"></script>
+  </body>
+</html>
