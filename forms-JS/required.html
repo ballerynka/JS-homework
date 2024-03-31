@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form JS</title>
+    <style>
+#agreeHelp,
+#selectProduct{
+    color:red;
+    font-size: 12px;
+}
+label{
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <form  id="form" action="">
+
+        <label for=" pizzaInput">
+            <input id="pizzaInput" type="checkbox">Pizza
+        </label>
+    <label for=" soupInput">
+            <input id="soupInput" type="checkbox">Spinach Soup
+        </label>
+            <label for=" burgerInput">
+            <input id="burgerInput" type="checkbox">Burger
+        </label>
+
+        <div id="selectProduct"></div>
+        
+<hr>
+
+        <label for="agreeHelp"><input type="checkbox" id="agreeCheck" required>I agree with terms and conditions
+        <div id="agreeHelp"></div></label>
+        <hr>    
+             <button onclick="submitData()" type="button">ORDER</button>
+    </form>
+
+    <script>
+
+
+function submitData(){
+
+    if(agreeCheck.required ){
+        
+        if(!pizzaInput.checked && !soupInput.checked && !burgerInput.checked ){
+selectProduct.innerHTML='You must select at least one product'
+        } else if(!agreeCheck.checked){
+               agreeHelp.innerHTML ='You must agree to terms in order to proceed'
+        }else{
+            form.submit()
+        }
+     
+    }
+
+}
+
+    </script>
+</body>
+</html>
+

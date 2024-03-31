@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DYNAMIC LIST JS</title>
+    <style>
+        body{
+            background-color: #345;
+            color: white;
+        }
+        label{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form action="/action">
+        ...
+        <hr>
+        <label for="">
+            Select payment method
+            <select id="payment" onchange="showPaymentDetails()">
+                <option value="">--not selected--</option>
+                <option value="visa">visa</option>
+                  <option value="master">master</option>
+                    <option value="paypal">paypal</option>
+                      <option value="ewallet">ewallet</option>
+            </select>
+        </label>
+        <hr>
+        <fieldset>
+            <legend>payment details</legend>
+            <div  id="details"></div>
+        </fieldset>
+...
+    </form>
+<script>
+function showPaymentDetails() {
+
+
+
+//  if (payment.value === "visa") {
+//    details.innerHTML = `<label> card number <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx"></label>
+//    <label> cvv <input type="text" placeholder="xxx"></label>
+//    <label> valid thru <input type="text" placeholder="MM / YY"></label>`;
+//  } else if (payment.value === "master") {
+//    details.innerHTML = `<label> card number <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx"></label>
+//    <label> cvv <input type="text" placeholder="xxx"></label>
+//    <label> valid thru <input type="text" placeholder="MM / YY"></label>`;
+//  } else if (payment.value === "paypal") {
+//    details.innerHTML = `<label> Email or mobile number <input type="email" placeholder="+123456789"></label>
+//    <label> Enter your password <input type="tel" placeholder="skdn@gmail.com"></label>`;
+//  } else if (payment.value === "ewallet") {
+//    details.innerHTML = `<label> ID type <input type="email" placeholder="MyId"></label>
+//    <label> ID Number <input type="tel" placeholder="+456765-23-2323"></label>`;
+//  }
+
+
+switch(payment.value){
+    case 'visa': 
+    details.innerHTML=`<label> card number <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx"></label>
+  <label> cvv <input type="text" placeholder="xxx"></label>
+ <label> valid thru <input type="text" placeholder="MM / YY"></label>`;
+ break;
+     case 'master': 
+    details.innerHTML=`<label> card number <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx"></label>
+  <label> cvv <input type="text" placeholder="xxx"></label>
+ <label> valid thru <input type="text" placeholder="MM / YY"></label>`;
+ break;
+     case 'paypal': 
+    details.innerHTML=`<label> Email or mobile number <input type="email" placeholder="+123456789"></label>
+ <label> Enter your password <input type="tel" placeholder="skdn@gmail.com"></label>`;
+ break;
+     case 'ewallet': 
+    details.innerHTML=`<label> ID type <input type="email" placeholder="MyId"></label>
+ <label> ID Number <input type="tel" placeholder="+456765-23-2323"></label>`;
+ break;
+}
+
+
+}
+
+</script>
+</body>
+</html>
